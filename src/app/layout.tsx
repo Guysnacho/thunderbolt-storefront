@@ -1,3 +1,4 @@
+import ConsentBanner from "@modules/layout/components/consent-banner"
 import { GoogleAnalytics } from "@next/third-parties/google"
 import { Metadata } from "next"
 
@@ -15,6 +16,7 @@ export default function RootLayout(props: { children: React.ReactNode }) {
     <html lang="en" data-mode="light">
       <body>
         <main className="relative">{props.children}</main>
+        <ConsentBanner />
       </body>
       {ANALYTICS_ID ? <GoogleAnalytics gaId={ANALYTICS_ID} /> : undefined}
     </html>
