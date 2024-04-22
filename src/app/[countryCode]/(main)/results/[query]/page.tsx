@@ -7,7 +7,7 @@ import { SortOptions } from "@modules/store/components/refinement-list/sort-prod
 
 export const metadata: Metadata = {
   title: "Search",
-  description: "Explore all of our products.",
+  description: "Explore all of our listings.",
 }
 
 type Params = {
