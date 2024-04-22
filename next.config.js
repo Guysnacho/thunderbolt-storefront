@@ -29,6 +29,10 @@ const nextConfig = withStoreConfig({
         protocol: "https",
         hostname: "images.unsplash.com",
       },
+      {
+        protocol: "https",
+        hostname: "qvhnswvfglazvefaplac.supabase.co",
+      },
     ],
   },
 })

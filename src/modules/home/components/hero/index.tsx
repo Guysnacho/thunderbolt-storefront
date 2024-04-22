@@ -58,12 +58,11 @@ const Hero = () => {
                   <div className="flex flex-row-reverse max-w-2xl md:mx-0 md:max-w-none overflow-hidden">
                     <Image
                       className="rounded-lg justify-end"
-                      objectFit="cover"
                       width={500}
                       height={400}
                       alt="Hero Image of a car. Prometheus 🔥 (@iamateapot)"
                       about="Hero Image of a car. Prometheus 🔥 (@iamateapot)"
-                      src="https://images.unsplash.com/photo-1665341449385-70fd7b88d176?q=80&w=500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      src="https://qvhnswvfglazvefaplac.supabase.co/storage/v1/object/public/assets/HeroCar.jpg?t=2024-04-22T09%3A16%3A02.932Z"
                     />
                   </div>
                   <div
