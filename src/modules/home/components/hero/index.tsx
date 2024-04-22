@@ -9,9 +9,12 @@ const Hero = () => {
     <div className="bg-white">
       <div className="relative isolate overflow-hidden bg-gradient-to-b from-blue-100/20">
         <div className="mx-auto max-w-7xl pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-40">
-          <div className="px-6 lg:px-0 lg:pt-4">
+          <div className="px-6 lg:px-0 lg:pt-4 my-auto">
             <div className="mx-auto max-w-2xl">
               <div className="max-w-lg">
+                <h1 className="tracking-tight text-5xl text-blue-900 sm:text-6xl">
+                  QAuto Preowned
+                </h1>
                 <div className="mt-24 sm:mt-32 lg:mt-16">
                   <a href="#" className="inline-flex space-x-6">
                     <span className="rounded-full bg-blue-600/10 px-3 py-1 text-sm font-semibold leading-6 text-blue-600 ring-1 ring-inset ring-blue-600/10">
@@ -19,9 +22,9 @@ const Hero = () => {
                     </span>
                   </a>
                 </div>
-                <h1 className="mt-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                <h2 className="mt-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
                   It&apos;s not the destination, it&apos;s how you get there!
-                </h1>
+                </h2>
                 <p className="mt-6 text-lg leading-8 text-gray-600">
                   Welcome to QAutos Preowned, where quality meets affordability
                   in every vehicle we offer. Whether you&apos;re seeking a sleek
