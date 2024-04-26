@@ -62,7 +62,7 @@ const Hero = () => {
                       height={400}
                       alt="Hero Image of a car. Prometheus 🔥 (@iamateapot)"
                       about="Hero Image of a car. Prometheus 🔥 (@iamateapot)"
-                      src="https://qvhnswvfglazvefaplac.supabase.co/storage/v1/object/public/assets/HeroCar.jpg?t=2024-04-22T09%3A16%3A02.932Z"
+                      src="https://qvhnswvfglazvefaplac.supabase.co/storage/v1/object/public/assets/HeroCar.jpg"
                     />
                   </div>
                   <div
