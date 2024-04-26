@@ -9,9 +9,9 @@
 </p>
 
 <h1 align="center">
-  Medusa Next.js Starter Template
+  Quick Auto Mall | Medusa Next.js Starter Template
 </h1>
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/aab8b014-681f-4c5f-a4af-a1944a7a3a6d/deploy-status)](https://app.netlify.com/sites/tunji-thunderbolt-storefront/deploys)
 <p align="center">
 Combine Medusa's modules for your commerce backend with the newest Next.js 14 features for a performant storefront.</p>
 
