@@ -33,6 +33,12 @@ const nextConfig = withStoreConfig({
         protocol: "https",
         hostname: "qvhnswvfglazvefaplac.supabase.co",
       },
+      {
+        protocol: 'https',
+        hostname: '**',
+        port: '',
+        pathname: '**',
+    },
     ],
   },
 })
