@@ -56,7 +56,8 @@ const Hero = () => {
                 />
                 <div className="relative pl-6 pt-8 sm:pl-16 sm:py-16 md:pl-16 -mr-5">
                   <div className="flex flex-row-reverse max-w-2xl md:mx-0 md:max-w-none overflow-hidden">
-                    <Image
+                    {/*eslint-disable-next-line @next/next/no-img-element*/}
+                    <img
                       className="rounded-lg justify-end"
                       width={500}
                       height={400}
