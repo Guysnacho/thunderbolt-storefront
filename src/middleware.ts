@@ -110,7 +110,7 @@ export async function middleware(request: NextRequest) {
 
   // is static asset
   if (isStaticAsset) {
-    return NextResponse.next()
+    return NextResponse.redirect(request.nextUrl)
   }
 
   const redirectPath =
