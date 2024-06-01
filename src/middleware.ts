@@ -86,7 +86,9 @@ async function getCountryCode(
 export async function middleware(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams
   const isOnboarding = searchParams.get("onboarding") === "true"
-  const isStaticAsset = request.url.includes("public/assets")
+  const isStaticAsset =
+    request.url.includes("public/assets") ||
+    request.url.includes("/favicon.ico")
   const cartId = searchParams.get("cart_id")
   const checkoutStep = searchParams.get("step")
   const onboardingCookie = request.cookies.get("_medusa_onboarding")
@@ -110,7 +112,7 @@ export async function middleware(request: NextRequest) {
 
   // is static asset
   if (isStaticAsset) {
-    return NextResponse.redirect(request.nextUrl)
+    return NextResponse.redirect(request.url, { headers: request.headers })
   }
 
   const redirectPath =
