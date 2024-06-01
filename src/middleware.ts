@@ -101,6 +101,27 @@ export async function middleware(request: NextRequest) {
   const urlHasCountryCode =
     countryCode && request.nextUrl.pathname.split("/")[1].includes(countryCode)
 
+  // is static asset
+  if (isStaticAsset) {
+    const originalParams = await request.json()
+    const transformParams = new URLSearchParams()
+    if (originalParams.url.includes("quality"))
+      transformParams.append("quality", transformParams.get("q")!)
+    if (originalParams.url.includes("width"))
+      transformParams.append("width", transformParams.get("w")!)
+
+    console.debug(originalParams.toString())
+    console.debug(transformParams.toString())
+    return NextResponse.redirect(
+      transformParams.size > 0
+        ? originalParams.url + transformParams.toString()
+        : originalParams.url,
+      {
+        headers: request.headers,
+      }
+    )
+  }
+
   // check if one of the country codes is in the url
   if (
     urlHasCountryCode &&
@@ -108,11 +129,6 @@ export async function middleware(request: NextRequest) {
     (!cartId || cartIdCookie)
   ) {
     return NextResponse.next()
-  }
-
-  // is static asset
-  if (isStaticAsset) {
-    return NextResponse.redirect(request.url, { headers: request.headers })
   }
 
   const redirectPath =
