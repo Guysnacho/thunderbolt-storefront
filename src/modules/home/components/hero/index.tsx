@@ -13,7 +13,7 @@ const Hero = () => {
             <div className="mx-auto max-w-2xl">
               <div className="max-w-lg">
                 <h1 className="tracking-tight text-5xl text-blue-900 sm:text-6xl">
-                  QAuto Preowned
+                  Qautos Preowne
                 </h1>
                 <div className="mt-24 sm:mt-32 lg:mt-16">
                   <a href="#" className="inline-flex space-x-6">

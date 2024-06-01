@@ -8,7 +8,7 @@ import { ProductCollectionWithPreviews } from "types/global"
 import { cache } from "react"
 
 export const metadata: Metadata = {
-  title: "QAuto Preowned",
+  title: "Qautos Preowne",
   description:
     "Home of Quick Auto Mall, your all in one preowned vehicle destination.",
 }
