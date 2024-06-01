@@ -87,8 +87,7 @@ export async function middleware(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams
   const isOnboarding = searchParams.get("onboarding") === "true"
   const isStaticAsset =
-    request.url.includes("assets") ||
-    request.url.includes("favicon.ico")
+    request.url.includes("assets") || request.url.includes("favicon.ico")
   const cartId = searchParams.get("cart_id")
   const checkoutStep = searchParams.get("step")
   const onboardingCookie = request.cookies.get("_medusa_onboarding")
@@ -104,20 +103,15 @@ export async function middleware(request: NextRequest) {
   // is static asset
   if (isStaticAsset) {
     const originalParams = await request.json()
-    const transformParams = new URLSearchParams()
-    if (originalParams.url.includes("quality"))
-      transformParams.append("quality", transformParams.get("q")!)
-    if (originalParams.url.includes("width"))
-      transformParams.append("width", transformParams.get("w")!)
+    // const transformParams = new URLSearchParams()
+    // if (originalParams.url.includes("quality"))
+    //   transformParams.append("quality", transformParams.get("q")!)
+    // if (originalParams.url.includes("width"))
+    //   transformParams.append("width", transformParams.get("w")!)
 
     console.debug(originalParams.toString())
-    console.debug(transformParams.toString())
-    return NextResponse.redirect(
-      transformParams.size > 0
-        ? new URL(originalParams.url) + transformParams.toString()
-        : new URL(originalParams.url),
-      304
-    )
+    // console.debug(transformParams.toString())
+    return NextResponse.redirect(new URL(originalParams.url), 304)
   }
 
   // check if one of the country codes is in the url
