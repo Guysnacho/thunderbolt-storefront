@@ -112,10 +112,10 @@ export async function middleware(request: NextRequest) {
 
     console.debug(originalParams.toString())
     console.debug(transformParams.toString())
-    return NextResponse.rewrite(
+    return NextResponse.redirect(
       transformParams.size > 0
-        ? originalParams.url + transformParams.toString()
-        : originalParams.url,
+        ? new URL(originalParams.url) + transformParams.toString()
+        : new URL(originalParams.url),
       {
         headers: request.headers,
       }

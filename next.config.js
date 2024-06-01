@@ -31,8 +31,7 @@ const nextConfig = withStoreConfig({
       },
       {
         protocol: "https",
-        hostname: "qvhnswvfglazvefaplac.supabase.co",
-        pathname: "/storage/v1/object/public/assets/*"
+        hostname: "qvhnswvfglazvefaplac.supabase.co"
       },
       {
         protocol: 'https',
