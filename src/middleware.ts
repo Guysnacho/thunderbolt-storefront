@@ -116,7 +116,7 @@ export async function middleware(request: NextRequest) {
       transformParams.size > 0
         ? new URL(originalParams.url) + transformParams.toString()
         : new URL(originalParams.url),
-      301
+      304
     )
   }
 
